@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            body {
+                  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                  background-color: rgb(31, 30, 30);
+            }
+
+            li {
+                  list-style: none;
+            }
+
+            a {
+                  text-decoration: none;
+                  color: inherit;
+                  font-size: inherit;
+
+                  &:visited {
+                        color: inherit;
+                  }
+            }
+
+            .menu {
+                  width: 100%;
+                  height: 70px;
+                  border: 1px soliod rgb(14, 211, 7);
+                  background-color: rgb(216, 233, 233);
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 5px 20px;
+                  position: relative;
+      
+
+
+                  >* {
+                        height: 100%;
+                       /* border: 2px solid red;*/
+                        display: flex;
+                  }
+
+                  >span {
+
+                        width: 200px;
+                        color: rgb(236, 117, 5);
+                        background-color: rgb(253, 233, 213);
+                        justify-content: center;
+                        align-items: center;
+                  }
+
+                  >ul {
+                        min-width: 50%;
+                        flex-direction: row-reverse;
+                     /*   border: 1px solid red;*/
+
+                        >li {
+                              /*border: 1px solid rgb(27, 187, 21);*/
+
+                              >a {
+                                    display: flex;
+                                   /* background-color: red;*/
+                                    width: 100%;
+                                    height: 100%;
+                                    text-transform: capitalize;
+                                    align-items: center;
+                                    padding: 0 15px;
+                                    font-size: 15px;
+                                    position: relative;
+                                    &:hover{
+                                          &::after{
+                                                width: 100%;
+                                                left: 0;
+                                          }
+                                    }
+                                    &::after{
+                                          content: '';
+                                          display: flex;
+                                          position: absolute;
+                                          width: 0;
+                                          height: 3px;
+                                          bottom: 0;
+                                          left: 50%;
+                                          background-color: red;
+                                          transition: 0.4s;
+
+                                    }
+                                    
+                              }
+                             /* ///maga menu////*/
+                             &:hover{
+                              >ul{
+                                    opacity: 1;
+                                    visibility: visible;
+                              }
+                             }
+                              
+                              >ul{
+                                    width: 100%;
+                                    height: 400px;
+                                    background-color: white;
+                                    position: absolute;
+                                  right: 0;
+                                  top: 100%;
+                                  opacity: 0;
+                                  visibility: hidden;
+                                  transition: 1s;
+                                  >li{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    background-image: url(img1.png);
+                                    background-repeat: no-repeat;
+                                    >ul{
+                                          width: 250px;
+                                          /*border: 1px solid rgb(236, 14, 14);*/
+                                          >li{
+                                                line-height: 50px;
+                                                font-size: 16px;
+                                                &:hover{
+                                                      background-color: rgb(134, 129, 138);
+                                                }
+                                          }
+
+                                    }
+                                  }
+                                    
+                              }
+
+                        }
+                  }
+            }
+      </style>
+</head>
+
+<body>
+      <nav class="menu">
+            <span> chosse your city</span>
+            <ul>
+                  <li><a href="">category</a>
+                        <ul>
+                              <li>
+                                    <ul>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                    </ul>
+                                    <ul>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                    </ul>
+                                    <ul>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                    </ul>
+                                    <ul>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                          <li><a href="">submenu</a></li>
+                                    </ul>
+                              </li>
+                        </ul>
+                  </li>
+                  <li><a href="">home</a></li>
+                  <li><a href="">about</a></li>
+                  <li><a href="">article</a></li>
+                  <li><a href="">socail</a></li>
+                  <li><a href="">gallery</a></li>
+                  <li><a href="">blog</a></li>
+                  <li><a href="">contact</a></li>
+            </ul>
+      </nav>
+</body>
+
+</html>
